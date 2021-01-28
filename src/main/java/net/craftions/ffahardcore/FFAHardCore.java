@@ -24,6 +24,7 @@ public final class FFAHardCore extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new EventPlayerRespawn(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerInventory(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerItemDrop(), this);
+        Bukkit.getPluginManager().registerEvents(new EventFoodLevelChange(), this);
     }
 
     @Override
