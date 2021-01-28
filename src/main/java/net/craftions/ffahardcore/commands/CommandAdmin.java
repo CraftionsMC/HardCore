@@ -19,7 +19,7 @@ public class CommandAdmin implements CommandExecutor {
             }else {
                 if(args[0].equals("setspawn")){
                     FFAHardCore.locationManager.setLocation("spawn", ((Player) sender).getLocation());
-                    FFAHardCore.config.getConfig().set("ragemode.spawn", ((Player) sender).getLocation());
+                    FFAHardCore.config.getConfig().set("hardcore.spawn", ((Player) sender).getLocation());
                     FFAHardCore.config.reloadConfig(true);
                     sender.sendMessage(FFAHardCore.prefix + "§aThe spawn was successfully set.");
                 }else if(args[0].equals("tpspawn")){
