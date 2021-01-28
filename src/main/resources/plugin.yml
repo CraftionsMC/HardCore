@@ -3,3 +3,16 @@ version: ${project.version}
 main: net.craftions.ragemode.Ragemode
 api-version: 1.16
 authors: [ MCTzOCK ]
+load: POSTWORLD
+database: false
+commands:
+  admin:
+    usage: /<command> <setspawn|tpspawn>
+    permission: craftions.ragemode.command.admin
+permissions:
+  craftions.ragemode.command.admin:
+    description: You need this permission to run the /admin command
+  craftions.ragemode.drop.bypass:
+    description: You need this permission to drop items
+  craftions.ragemode.inventory.bypass:
+    description: You need this permission to use your inventory
