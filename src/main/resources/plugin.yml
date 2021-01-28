@@ -1,0 +1,5 @@
+name: Ragemode
+version: ${project.version}
+main: net.craftions.ragemode.Ragemode
+api-version: 1.16
+authors: [ MCTzOCK ]
