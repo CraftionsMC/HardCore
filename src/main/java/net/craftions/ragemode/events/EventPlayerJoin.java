@@ -48,10 +48,10 @@ public class EventPlayerJoin implements Listener {
 
         e.getPlayer().getInventory().setItem(0, sword);
         e.getPlayer().getInventory().setItem(1, bow);
-        e.getPlayer().getInventory().setItem(103, helmet);
-        e.getPlayer().getInventory().setItem(102, chest);
-        e.getPlayer().getInventory().setItem(101, leggings);
-        e.getPlayer().getInventory().setItem(100, boots);
+        e.getPlayer().getInventory().setItem(39, helmet);
+        e.getPlayer().getInventory().setItem(38, chest);
+        e.getPlayer().getInventory().setItem(37, leggings);
+        e.getPlayer().getInventory().setItem(36, boots);
 
         try {
             e.getPlayer().teleport(Ragemode.locationManager.getLocation("spawn"));
