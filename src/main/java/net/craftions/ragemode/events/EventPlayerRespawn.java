@@ -12,9 +12,9 @@ public class EventPlayerRespawn implements Listener {
 
     @EventHandler
     public void onRespawn(PlayerRespawnEvent e){
-        if(Ragemode.locationManager.hasLocation("spawn")){
+        try {
             e.getPlayer().teleport(Ragemode.locationManager.getLocation("spawn"));
-        }else {
+        }catch (Exception ex){
             e.getPlayer().sendMessage(Ragemode.prefix + "§cThe spawn was not set yet. Please define the spawn with §e/admin setspawn");
         }
     }

@@ -46,16 +46,16 @@ public class EventPlayerJoin implements Listener {
         leggings.setItemMeta(leggingsMeta);
         boots.setItemMeta(bootsMeta);
 
-        e.getPlayer().getInventory().addItem(sword);
-        e.getPlayer().getInventory().addItem(bow);
+        e.getPlayer().getInventory().setItem(0, sword);
+        e.getPlayer().getInventory().setItem(1, bow);
         e.getPlayer().getInventory().setItem(103, helmet);
         e.getPlayer().getInventory().setItem(102, chest);
         e.getPlayer().getInventory().setItem(101, leggings);
         e.getPlayer().getInventory().setItem(100, boots);
 
-        if(Ragemode.locationManager.hasLocation("spawn")){
+        try {
             e.getPlayer().teleport(Ragemode.locationManager.getLocation("spawn"));
-        }else {
+        }catch (Exception ex){
             e.getPlayer().sendMessage(Ragemode.prefix + "§cThe spawn was not set yet. Please define the spawn with §e/admin setspawn");
         }
     }
