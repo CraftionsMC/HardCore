@@ -1,23 +1,23 @@
-package net.craftions.ragemode;
+package net.craftions.ffahardcore;
 
-import net.craftions.ragemode.commands.CommandAdmin;
-import net.craftions.ragemode.events.*;
+import net.craftions.ffahardcore.commands.CommandAdmin;
+import net.craftions.ffahardcore.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-public final class Ragemode extends JavaPlugin {
+public final class FFAHardCore extends JavaPlugin {
 
-    public static Ragemode plugin;
+    public static FFAHardCore plugin;
     public static Config config;
     public static LocationManager locationManager = new LocationManager();
-    public static String prefix = "[§cRageMode§r] ";
+    public static String prefix = "[§cHardCore§r] ";
 
     @Override
     public void onEnable() {
         plugin = this;
-        config = new Config(new File("./plugins/RageMode/config.yml"));
+        config = new Config(new File("./plugins/FFAHardCore/config.yml"));
         getCommand("admin").setExecutor(new CommandAdmin());
         Bukkit.getPluginManager().registerEvents(new EventPlayerJoin(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerDeath(), this);

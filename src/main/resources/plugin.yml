@@ -1,6 +1,6 @@
-name: Ragemode
+name: FFAHardCore
 version: ${project.version}
-main: net.craftions.ragemode.Ragemode
+main: net.craftions.ffahardcore.FFAHardCore
 api-version: 1.16
 authors: [ MCTzOCK ]
 load: POSTWORLD
@@ -8,11 +8,11 @@ database: false
 commands:
   admin:
     usage: /<command> <setspawn|tpspawn>
-    permission: craftions.ragemode.command.admin
+    permission: craftions.ffahardcore.command.admin
 permissions:
-  craftions.ragemode.command.admin:
+  craftions.ffahardcore.command.admin:
     description: You need this permission to run the /admin command
-  craftions.ragemode.drop.bypass:
+  craftions.ffahardcore.drop.bypass:
     description: You need this permission to drop items
-  craftions.ragemode.inventory.bypass:
+  craftions.ffahardcore.inventory.bypass:
     description: You need this permission to use your inventory

@@ -1,10 +1,8 @@
 /*
  * Copyright (c) 2021 Ben Siebert. All rights reserved.
  */
-package net.craftions.ragemode;
+package net.craftions.ffahardcore;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -42,7 +40,7 @@ public class Config {
             saveConfig();
         }
         this.conf = YamlConfiguration.loadConfiguration(this.config);
-        Ragemode.locationManager.setLocation("spawn", this.getConfig().getLocation("ragemode.spawn"));
+        FFAHardCore.locationManager.setLocation("spawn", this.getConfig().getLocation("hardcore.spawn"));
     }
 
     public void saveConfig(){

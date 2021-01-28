@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 Ben Siebert. All rights reserved.
  */
-package net.craftions.ragemode;
+package net.craftions.ffahardcore;
 
 import org.bukkit.Location;
 

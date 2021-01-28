@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 Ben Siebert. All rights reserved.
  */
-package net.craftions.ragemode.events;
+package net.craftions.ffahardcore.events;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -1,9 +1,9 @@
 /*
  * Copyright (c) 2021 Ben Siebert. All rights reserved.
  */
-package net.craftions.ragemode.events;
+package net.craftions.ffahardcore.events;
 
-import net.craftions.ragemode.Ragemode;
+import net.craftions.ffahardcore.FFAHardCore;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.EventHandler;
@@ -30,7 +30,7 @@ public class EventPlayerJoin implements Listener {
         ItemMeta leggingsMeta = leggings.getItemMeta();
         ItemMeta bootsMeta = boots.getItemMeta();
 
-        swordMeta.addEnchant(Enchantment.DAMAGE_ALL, 4, true);
+        swordMeta.addEnchant(Enchantment.DAMAGE_ALL, 5, true);
         bowMeta.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
         bowMeta.addEnchant(Enchantment.ARROW_DAMAGE, 4, true);
         bowMeta.addEnchant(Enchantment.ARROW_FIRE, 3, true);
@@ -48,15 +48,16 @@ public class EventPlayerJoin implements Listener {
 
         e.getPlayer().getInventory().setItem(0, sword);
         e.getPlayer().getInventory().setItem(1, bow);
+        e.getPlayer().getInventory().setItem(2, new ItemStack(Material.ARROW));
         e.getPlayer().getInventory().setItem(39, helmet);
         e.getPlayer().getInventory().setItem(38, chest);
         e.getPlayer().getInventory().setItem(37, leggings);
         e.getPlayer().getInventory().setItem(36, boots);
 
         try {
-            e.getPlayer().teleport(Ragemode.locationManager.getLocation("spawn"));
+            e.getPlayer().teleport(FFAHardCore.locationManager.getLocation("spawn"));
         }catch (Exception ex){
-            e.getPlayer().sendMessage(Ragemode.prefix + "§cThe spawn was not set yet. Please define the spawn with §e/admin setspawn");
+            e.getPlayer().sendMessage(FFAHardCore.prefix + "§cThe spawn was not set yet. Please define the spawn with §e/admin setspawn");
         }
     }
 
